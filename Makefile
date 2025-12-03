@@ -1,6 +1,12 @@
 install: deps-install
 	npx simple-git-hooks
 
+deps-install:
+	npm ci
+
+deps-update:
+	npx ncu -u
+
 test:
 	npm test
 
@@ -12,3 +18,5 @@ lint:
 
 lint-fix:
 	npx eslint . --fix
+
+.PHONY: test
