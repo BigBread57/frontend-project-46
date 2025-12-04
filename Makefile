@@ -7,6 +7,9 @@ deps-install:
 deps-update:
 	npx ncu -u
 
+run:
+	gendiff file1.json file2.json
+
 test:
 	npm test
 
