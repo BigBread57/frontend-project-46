@@ -9,5 +9,5 @@ export const analyzer = (filePath1, filePath2, format) => {
   const data2 = getJSONData(filePath2)
   let raw_result = []
   raw_result = deepSort(analyzerDiff(data1, data2, raw_result))
-  console.log(formatters(raw_result, format))
+  return formatters(raw_result, format)
 }

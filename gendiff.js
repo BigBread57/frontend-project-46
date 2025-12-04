@@ -14,7 +14,7 @@ program
   .helpOption('-h, --help', 'display help for command')
   .action((filePath1, filePath2, options) => {
     const format = options.format ? options.format : 'stylish'
-    analyzer(filePath1, filePath2, format)
+    console.log(analyzer(filePath1, filePath2, format))
   })
 
 program.parse()

@@ -1,8 +1,8 @@
 import {
   analyzerDiff,
   deepSort,
-  stylishCallback,
 } from '../parsers/utils.js'
+import { stylishCallback } from '../formatters/stylish.js'
 
 describe('Utils functions', () => {
   describe('analyzerDiff', () => {

@@ -1,4 +1,4 @@
-import { formatters } from '../parsers/formatters.js'
+import { formatters } from '../formatters/index.js'
 
 describe('Formatters', () => {
   const mockDiffTree = [

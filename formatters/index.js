@@ -7,6 +7,8 @@ export const formatters = (raw_result, format) => {
       return JSON.stringify(raw_result.reduce(stylishCallback, {}), null, 2)
     case 'plain':
       return plainDiff(raw_result)
+    case 'json':
+      return JSON.stringify(raw_result)
     default:
       return ''
   }
