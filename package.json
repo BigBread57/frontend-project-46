@@ -14,14 +14,10 @@
   "author": "",
   "type": "module",
   "main": "code/index.js",
-  "exports": {
-    ".": "./code/index.js"
-  },
   "bin": {
-    "gendiff": "./bin/gendiff.js"
+    "gendiff": "bin/gendiff.js"
   },
   "scripts": {
-    "gendiff": "node bin/gendiff.js",
     "test": "NODE_OPTIONS=--experimental-vm-modules npx jest",
     "test:watch": "NODE_OPTIONS=--experimental-vm-modules npx jest --watch",
     "test:coverage": "NODE_OPTIONS=--experimental-vm-modules npx jest --coverage"
