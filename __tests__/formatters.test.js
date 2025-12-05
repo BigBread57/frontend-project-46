@@ -1,4 +1,5 @@
 import { formatters } from '../src/formatters/index.js'
+import {stylishDiff} from "../src/formatters/stylish.js";
 
 describe('Formatters', () => {
   const mockDiffTree = [
@@ -13,6 +14,14 @@ describe('Formatters', () => {
     },
   ]
 
+  const stylishTree = '{\n'
+    + '    common: {\n'
+    + '        setting1: Value 1,\n'
+    + '        - setting2: 200,\n'
+    + '        + setting3: true\n'
+    + '    }\n'
+    + '}'
+
   test('should return empty string for unknown format', () => {
     const result = formatters(mockDiffTree, 'unknown')
     expect(result).toBe('')
@@ -20,10 +29,7 @@ describe('Formatters', () => {
 
   test('should format with stylish format', () => {
     const result = formatters(mockDiffTree, 'stylish')
-    expect(() => JSON.parse(result)).not.toThrow()
-
-    const parsed = JSON.parse(result)
-    expect(parsed).toHaveProperty('common')
+    expect(result).toContain(stylishTree)
   })
 
   test('should format with plain format', () => {
