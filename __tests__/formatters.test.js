@@ -1,5 +1,4 @@
 import { formatters } from '../src/formatters/index.js'
-import {stylishDiff} from "../src/formatters/stylish.js";
 
 describe('Formatters', () => {
   const mockDiffTree = [
