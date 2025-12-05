@@ -126,7 +126,7 @@ describe('Utils functions', () => {
       const result = items.reduce(stylishCallback, {})
 
       expect(result).toEqual({
-        'a': 1,
+        '  a': 1,
         '- b': 2,
         '+ c': 3,
       })
@@ -146,7 +146,7 @@ describe('Utils functions', () => {
       const result = items.reduce(stylishCallback, {})
 
       expect(result).toEqual({
-        a: { b: 1 },
+        '  a': { '  b': 1 },
       })
     })
   })

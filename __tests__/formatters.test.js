@@ -15,8 +15,8 @@ describe('Formatters', () => {
 
   const stylishTree = '{\n'
     + '    common: {\n'
-    + '        setting1: Value 1,\n'
-    + '        - setting2: 200,\n'
+    + '        setting1: Value 1\n'
+    + '        - setting2: 200\n'
     + '        + setting3: true\n'
     + '    }\n'
     + '}'
