@@ -4,7 +4,7 @@ import { plainDiff } from './plain.js'
 export const formatters = (raw_result, format) => {
   switch (format) {
     case 'stylish':
-      return JSON.stringify(raw_result.reduce(stylishCallback, {}), null, 4)
+      return JSON.stringify(raw_result.reduce(stylishCallback, {}), null, 3)
     case 'plain':
       return plainDiff(raw_result)
     case 'json':
