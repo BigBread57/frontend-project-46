@@ -1,9 +1,10 @@
 export const stylishCallback = (acc, item) => {
+  const diff = ['+ ', '- '].includes(item.diff) ? item.diff : '  '
   if (Array.isArray(item.value)) {
-    acc[`${item.diff}${item.key}`] = item.value.reduce(stylishCallback, {})
+    acc[`${diff}${item.key}`] = item.value.reduce(stylishCallback, {})
   }
   else {
-    acc[`${item.diff}${item.key}`] = item.value
+    acc[`${diff}${item.key}`] = item.value
   }
   return acc
 }
