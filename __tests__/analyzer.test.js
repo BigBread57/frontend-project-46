@@ -1,4 +1,4 @@
-import { analyzer } from '../parsers/analyzer.js'
+import { analyzer } from '../src/parsers/analyzer.js'
 import { jest } from '@jest/globals'
 
 console.log = jest.fn()

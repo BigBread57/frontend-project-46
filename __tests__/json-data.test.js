@@ -1,7 +1,7 @@
 import { writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
-import { getJSONData } from '../parsers/json-data.js'
+import { getJSONData } from '../src/parsers/json-data.js'
 
 describe('JSON/YAML data parser', () => {
   let tempDir
